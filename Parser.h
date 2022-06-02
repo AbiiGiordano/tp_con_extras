@@ -42,10 +42,6 @@ private:
     //POST: Devuelve el Escritor que corresponde en base a la referencia de la Lectura.
     Escritor* rastrear_escritor(int codigo, Lista_escritores *lista_escritores);
 
-    //PRE: lectura debe ser un objeto válido.
-    //POST: Devuelve el indice de la lista_lecturas donde se debe almacenar la lectura para mantener la lista en orden.
-    int obtener_posicion_correcta(Lectura* lectura, Lista_lecturas *lista_lecturas);
-
     //PRE: linea es una linea leida del archivo de Lecturas.
     //POS: Devuelve la referencia al Escritor que le corresponde a la Lectura.
     int obtener_referencia(string linea);
