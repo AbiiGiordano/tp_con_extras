@@ -137,22 +137,7 @@ void Parser::almacenar_escritor(Escritor* escritor, Lista_escritores *lista_escr
 }
 
 void Parser::almacenar_lectura(Lectura* lectura, Lista_lecturas *lista_lecturas){
-    int posicion_correcta = obtener_posicion_correcta(lectura, lista_lecturas);
     lista_lecturas->alta(lectura);
-}
-
-int Parser::obtener_posicion_correcta(Lectura* lectura, Lista_lecturas *lista_lecturas){
-    int indice = 1;
-
-    if (!lista_lecturas->vacia()){
-        lista_lecturas->inicializar();
-
-        while(lista_lecturas->hay_actual() && lectura->comparar_lecturas(lista_lecturas->consultar(indice)) != -1){
-            indice++;
-            lista_lecturas->siguiente();
-        }
-    }
-    return indice;
 }
 
 bool Parser::verificar_escritor(string linea_escritor){
